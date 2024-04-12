@@ -12,13 +12,12 @@ jobs:
     name: Add issue to project
     runs-on: ubuntu-latest
     steps:
-      - uses: hmarr/debug-action@v3
       - uses: octo-sts/action@6177b4481c00308b3839969c3eca88c96a91775f # v1.0.0
         id: octo-sts
         with:
           scope: ${{ github.repository_owner }}
           identity: org-project
-      - uses: actions/add-to-project@v0.5.0
+      - uses: actions/add-to-project@9bfe908f2eaa7ba10340b31e314148fcfe6a2458 # v1.0.1
         with:
           project-url: https://github.com/orgs/rothandrew-octo-sts-testing/projects/1
           github-token: ${{ steps.octo-sts.outputs.token }}
